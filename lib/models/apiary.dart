@@ -20,4 +20,22 @@ class Apiary {
   factory Apiary.fromJson(Map<String, dynamic> json) => _$ApiaryFromJson(json);
 
   Map<String, dynamic> toJson() => _$ApiaryToJson(this);
+
+  Map<String, dynamic>? getWeights() {
+    final delta = weights['delta'] as Map<String, dynamic>?;
+    if (delta != null) {
+      final entry = delta.entries.firstWhere(
+        (entry) {
+          return int.tryParse(entry.key) != null;
+        },
+      );
+
+      (entry.value as Map<String, dynamic>?)?.removeWhere(
+        (key, value) => value == null,
+      );
+      return entry.value;
+    }
+
+    return null;
+  }
 }
