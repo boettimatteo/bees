@@ -32,6 +32,8 @@ dependencies:
     sdk: flutter
   dio: ^5.0.1
   flutter_secure_storage: ^8.0.0
+  get_it: ^7.2.0
+  injectable: ^1.5.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -50,6 +52,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner:
   json_serializable: ^6.6.1
+  injectable_generator:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
